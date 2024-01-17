@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@300;400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap');
+
+body,
+button,
+input,
+select,
+textarea,
+code,
+pre,
+.is-family-primary,
+.is-family-sans-serif,
+.is-family-secondary {
+    font-family: unset !important;
+} //unset font ที่มาจาก dark mode
+
+$family-sans-serif: "Nunito", 'Noto Sans Thai Looped' !default;
+
+@import '/node_modules/bulma/bulma.sass';
+
+nav svg {
+    width: 9em;
+    height: auto;
+    margin: unset;
+}
+
+h1.title {
+    font-weight: 600;
+}
