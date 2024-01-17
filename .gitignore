@@ -46,10 +46,8 @@ Thumbs.db
 src/env/env.ts
 
 #firebase
-firebase.json
-.firebaserc
 .firebase
-    
+
 
 .angular
 database.rules.json
