@@ -16,9 +16,9 @@ jobs:
         with:
           node-version: '18.x'
       - name: Install dependencies
-          run: npm install
+      - run: npm install
       - name: Install Angular CLI
-          run: npm install -g @angular/cli > /dev/null  
+      - run: npm install -g @angular/cli > /dev/null  
       - name: Build
       - run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
