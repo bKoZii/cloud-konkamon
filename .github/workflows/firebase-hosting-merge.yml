@@ -12,16 +12,16 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Install node
-      - uses: actions/setup-node@v3
+        uses: actions/setup-node@v3
         with:
           node-version: '18.x'
       - name: Install dependencies
-      - run: npm install
+        run: npm install
       - name: Install Angular CLI
-      - run: npm install -g @angular/cli > /dev/null  
+        run: npm install -g @angular/cli > /dev/null  
       - name: Build
-      - run: npm run build
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+        run: npm run build
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CLOUD_KONKAMON }}'
