@@ -49,7 +49,7 @@ export class FirebaseComponent implements OnInit {
 		});
 	}
 
-	newTutorial(name: string): void {
+	newTutorial(name?: string): void {
 		this.submitted = false;
 		this.comments = new Comment();
 		this.comments.username = name;

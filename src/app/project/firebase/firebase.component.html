@@ -41,7 +41,7 @@
 							</p>
 						</div>
 
-						<button (click)="saveTutorial()" class="button is-primary" [disabled]="!comments.content">Comment</button>
+						<button (click)="saveTutorial()" class="button is-primary" [disabled]="!comments.content || !comments.username">Comment</button>
 					</div>
 
 				</div>
