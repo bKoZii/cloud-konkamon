@@ -1,6 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+@import '/node_modules/bulma/bulma.sass';
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@300;400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap');
+@font-face {
+    font-family: "Nunito";
+    font-weight: 400;
+    src: url('assets/Nunito-400.woff2') format('woff2');
+}
+@font-face {
+    font-family: "Nunito";
+    font-weight: 500;
+    src: url('assets/Nunito-500.woff2') format('woff2');
+}
+@font-face {
+    font-family: "Nunito";
+    font-weight: 600;
+    src: url('assets/Nunito-600.woff2') format('woff2');
+}
+@font-face {
+    font-family: "Nunito";
+    font-weight: 800;
+    src: url('assets/Nunito-800.woff2') format('woff2');
+}
+@font-face {
+    font-family: "Noto Sans Thai Looped";
+    font-weight: 400;
+    src: url('assets/NotoSansThaiLooped-400.woff2') format('woff2');
+}
+@font-face {
+    font-family: "Noto Sans Thai Looped";
+    font-weight: 600;
+    src: url('assets/NotoSansThaiLooped-600.woff2') format('woff2');
+}
+@font-face {
+    font-family: "Noto Sans Thai Looped";
+    font-weight: 8  00;
+    src: url('assets/NotoSansThaiLooped-800.woff2') format('woff2');
+}
 
 body,
 button,
@@ -15,9 +50,10 @@ pre,
     font-family: unset !important;
 } //unset font ที่มาจาก dark mode
 
+
 $family-sans-serif: "Nunito", 'Noto Sans Thai Looped' !default;
 
-@import '/node_modules/bulma/bulma.sass';
+
 
 nav svg {
     width: 8em;
