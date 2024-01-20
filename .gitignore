@@ -51,3 +51,4 @@ src/env/env.ts
 
 .angular
 database.rules.json
+_backup
