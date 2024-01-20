@@ -1,9 +1,5 @@
-/*
-Darkly Theme - from Bulmaswatch
-https://jenil.github.io/bulmaswatch/
-*/
-
-@import url('https://jenil.github.io/bulmaswatch/darkly/bulmaswatch.min.css');
-//unset font ที่มาจาก dark mode
-
-// $family-sans-serif: "Nunit", 'Noto Sans Thai Looped' !default;
+nav svg {
+    width: 8em;
+    height: auto;
+    margin: unset;
+}

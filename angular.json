@@ -31,7 +31,12 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              {
+                "input": "src/assets/bulmaswatch.min.css",
+                "bundleName": "bulma-darkly",
+                "inject": true
+              }
             ],
             "scripts": []
           },

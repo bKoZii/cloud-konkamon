@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import '/node_modules/bulma/bulma.sass';
+
 
 @font-face {
     font-family: "Nunito";
@@ -33,33 +33,13 @@
 }
 @font-face {
     font-family: "Noto Sans Thai Looped";
-    font-weight: 8  00;
+    font-weight: 800;
     src: url('assets/NotoSansThaiLooped-800.woff2') format('woff2');
 }
 
-body,
-button,
-input,
-select,
-textarea,
-code,
-pre,
-.is-family-primary,
-.is-family-sans-serif,
-.is-family-secondary {
-    font-family: unset !important;
-} //unset font ที่มาจาก dark mode
-
-
 $family-sans-serif: "Nunito", 'Noto Sans Thai Looped' !default;
 
-
-
-nav svg {
-    width: 8em;
-    height: auto;
-    margin: unset;
-}
+@import '/node_modules/bulma/bulma.sass';
 
 h1.title {
     font-weight: 600;
