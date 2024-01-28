@@ -1,0 +1,63 @@
+<div id="modal-js-example" class="modal is-active">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">เพิ่มข้อมูล</p>
+            <button class="delete" aria-label="close" (click)="closeModal()"></button>
+        </header>
+        <section class="modal-card-body">
+            <div class="field columns mb-1 is-gapless">
+                <div class="column is-2">
+                    <p class="control">
+                        <span class="select">
+                            <select [(ngModel)]="member.title">
+                                <option selected>นาย</option>
+                                <option>นาง</option>
+                                <option>นางสาว</option>
+                            </select>
+                        </span>
+                    </p>
+                </div>
+                <div class="column">
+                    <p class="control">
+                        <input [(ngModel)]="member.fName" class="input" type="text" placeholder="ชื่อ">
+                    </p>
+                </div>
+                <div class="column">
+                    <p class="control">
+                        <input [(ngModel)]="member.lName" class="input" type="text" placeholder="นามสกุล">
+                    </p>
+                </div>
+            </div>
+            <div class="field columns mb-1 is-gapless">
+                <div class="column">
+                    <p class="control">
+                        <input [(ngModel)]="member.email" class="input" type="text" placeholder="อีเมลล์">
+                    </p>
+                </div>
+                <div class="column">
+                    <p class="control">
+                        <input [(ngModel)]="member.mobileNum" class="input" type="text" placeholder="เบอร์โทร">
+                    </p>
+                </div>
+                <div class="column">
+                    <p class="control">
+                        <input [(ngModel)]="member.lineID" class="input" type="text" placeholder="ไอดี ไลน์">
+                    </p>
+                </div>
+                </div>
+                <div class="field columns is-gapless">
+                <div class="column">
+                    <p class="control">
+                        <textarea [(ngModel)]="member.address" class="textarea" placeholder="ที่อยู่"></textarea>
+                    </p>
+                </div>
+            </div>
+
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button is-success" (click)="submitForm()" [disabled]="!member.fName || !member.lName">Save changes</button>
+            <button class="button" (click)="clearForm()">Clear</button>
+        </footer>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-image">
+        <figure class="image ">
+            <img src="{{image}}" alt="Placeholder image">
+        </figure>
+    </div>
+    <div class="card-content">
+        <h1 *ngIf="link" class="title mb-2"><a routerLink="{{link}}">{{title}}</a></h1>
+        <h1 *ngIf="!link" class="title mb-2">
+            <p>{{title}}</p>
+        </h1>
+        <div class="content">
+            <p>{{desc}}</p>
+        </div>
+        <ng-content></ng-content>
+    </div>
+</div>

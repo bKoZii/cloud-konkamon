@@ -1,0 +1,72 @@
+<section class="section">
+	<span class="tag is-primary is-medium">
+		เขียนเล่นๆ
+	</span>
+	<div class="heading">
+		<h1 class="title">Firebase - Realtime Database</h1>
+		<h2 class="subtitle">
+			ทดสอบการใช้งาน Firebase's Realtime Database ผ่าน Angular 15
+		</h2>
+	</div>
+
+	<div class="columns mt-2">
+
+		<div class="column is-4-fullhd">
+			<div class="card">
+				<header class="card-header">
+					<p class="card-header-title">แสดงความคิดเห็น</p>
+					<a href="#" class="card-header-icon" aria-label="more options">
+						<span class="icon">
+							<i class="fas fa-angle-down" aria-hidden="true"></i>
+						</span>
+					</a>
+				</header>
+				<div div *ngIf="!submitted">
+					<div class="card-content">
+						<div class="field">
+							<label class="label">Username</label>
+							<p class="control has-icon has-icon-right">
+								<input type="text" class="input has-background-dark has-text-white" id="title" required
+									[(ngModel)]="comments.username" disabled="title" />
+
+
+							</p>
+						</div>
+
+						<div class="field">
+							<label class="label">Comments</label>
+							<p class="control">
+								<input type="text" class="input has-background-dark has-text-white" id="title" required
+									[(ngModel)]="comments.content" name="title" />
+							</p>
+						</div>
+
+						<button (click)="saveTutorial()" class="button is-primary" [disabled]="!comments.content || !comments.username">Comment</button>
+					</div>
+
+				</div>
+				<div *ngIf="submitted">
+					<div class="card-content">
+						<div class="notification is-success">
+							Commented!!!
+						</div>
+						<button class="button is-primary" (click)="newTutorial(userName)">Add New Comment</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="column">
+
+
+			<div class="card" id="commentList">
+				<header class="card-header">
+					<p class="card-header-title">ความคิดเห็น</p>
+				</header>
+				<div class="card-content">
+					<app-comment-list></app-comment-list>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

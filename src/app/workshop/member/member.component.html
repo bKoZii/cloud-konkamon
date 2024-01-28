@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="heading mb-3">
+        <h1 class="title">
+            Member
+        </h1>
+        <h2 class="subtitle">
+            ทดสอบการใช้ Form
+        </h2>
+    </div>
+    <div class="columns">
+        <div class="column">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title">ข้อมุลสมาชิกในทีม</p>
+
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        <p>Coming Soon.....</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="column">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        ป้อนข้อมูล</p>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        <!-- <button class="button is-primary is-fullwidth js-modal-trigger" -->
+                        <!-- data-target="modal-js-example">เพิ่มข้อมูล</button> -->
+                        <button class="button is-primary is-fullwidth" (click)="selectItem()">
+                            เพิ่มข้อมูล
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<app-member-modal *ngIf="showModal" (onClose)="showModal=false"></app-member-modal>

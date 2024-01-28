@@ -1,0 +1,75 @@
+<section class="hero is-small p-6">
+
+  <div class="hero-body">
+    <div class="container">
+      <p class="title">
+        Workshop
+      </p>
+      <p class="subtitle">
+        รวมผลงาน วิชา 0232430865 การพัฒนาคลาวด์แอปพลิเคชัน
+      </p>
+    </div>
+  </div>
+
+  <!-- <div class="hero-foot">
+    <nav class="tabs is-boxed is-fullwidth">
+      <div class="container has-text-centered">
+        <ul>
+          <li routerLink="twowaybinding" routerLinkActive="is-active">
+            <a>Two-Way Binding
+              <span class="ml-2 tag is-success">
+                ชิ้นงาน
+              </span>
+            </a>
+          </li>
+          <li routerLink="firebase" routerLinkActive="is-active">
+            <a>Firebase - Realtime Database
+              <span class="ml-2 tag is-primary">
+                เขียนเล่นๆ
+              </span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+  </div> -->
+</section>
+<div class="container mb-6" id="mainContainer">
+  <section class="section">
+    <div *ngIf="isMainWorkshopRoute(); else routerOutlet" class="columns is-multiline is-variable is-1 is-desktop">
+      <div class="column">
+        <app-workshopcard title="Two-Way Binding" desc="ส่งข้อมูลแบบ Two-Way Binding"
+          image="assets/angular.jpg" link="twowaybinding">
+          <span class="tag is-angular">Angular</span>
+        </app-workshopcard>
+      </div>
+      <div class="column">
+        <app-workshopcard title="Form" desc="สร้าง Form พร้อมรับ/แสดง Input" link="member" image="assets/angular-form.jpg">
+          <div class="tags"><span class="tag is-angular">Angular</span><span class="tag is-primary">sweetalert2</span>
+          </div>
+        </app-workshopcard>
+      </div>
+      <div class="column">
+        <app-workshopcard></app-workshopcard>
+      </div>
+      <div class="column">
+        <app-workshopcard></app-workshopcard>
+      </div>
+    </div>
+    <ng-template #routerOutlet>
+      <router-outlet></router-outlet>
+    </ng-template>
+
+    <div *ngIf="isMainWorkshopRoute()" class="content">
+      <hr>
+      <h1>เกี่ยวกับชิ้นงาน</h1>
+      <h2><a routerLink="twowaybinding">Two-Way Binding</a></h2>
+      <p>อธิบายไม่เป็นค้าบ</p>
+      <h2><a routerLink="member">Form</a></h2>
+      <p>สร้าง Form โดยใช้ Bootstrap [เว็บนี้ใช้ Bulma] และใช้การ binding ของ Angular <code>ngModel</code></p>
+    </div>
+    
+  </section>
+
+</div>
