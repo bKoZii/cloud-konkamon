@@ -8,6 +8,9 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { env } from 'src/env/env';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MemberComponent } from './workshop/member/member.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ProjectComponent } from './project/project.component';
 
 
 @NgModule({
@@ -15,6 +18,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     AppComponent,
     HomeComponent,
     NotfoundComponent,
+    // MemberComponent,
+    ProfileComponent,
+    ProjectComponent,
   ],
   imports: [
     BrowserModule,

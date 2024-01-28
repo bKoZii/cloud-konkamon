@@ -1,24 +1,26 @@
-<nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+<nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" routerLink="home">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify"
         viewBox="0 0 375 74.999997" height="100" preserveAspectRatio="xMidYMid meet" version="1.0">
         <defs>
-          <linearGradient id="logo-gradient" x1="1000%" y1="0%" x2="10%" y2="100%" > 
-            
+          <linearGradient id="logo-gradient" x1="1000%" y1="0%" x2="10%" y2="100%">
+
             <stop offset="0%" stop-color="#365486">
-                <animate attributeName="stop-color" values="#365486; #F2AFEF; #365486" dur="8s" repeatCount="indefinite"></animate>
+              <animate attributeName="stop-color" values="#365486; #2ecc71; #365486" dur="8s" repeatCount="indefinite">
+              </animate>
             </stop>
 
-            <stop offset="100%" stop-color="#F2AFEF">
-                <animate attributeName="stop-color" values="#F2AFEF; #365486; #F2AFEF" dur="8s" repeatCount="indefinite"></animate>
+            <stop offset="100%" stop-color="#2ecc71">
+              <animate attributeName="stop-color" values="#2ecc71; #365486; #2ecc71" dur="8s" repeatCount="indefinite">
+              </animate>
             </stop>
 
-        </linearGradient> 
+          </linearGradient>
 
         </defs>
-        
-        <g fill="url('#logo-gradient')"  fill-opacity="1">
+
+        <g fill="url('#logo-gradient')" fill-opacity="1">
           <g transform="translate(0.0270794, 60.810479)">
             <g>
               <path
@@ -26,7 +28,7 @@
             </g>
           </g>
         </g>
-        <g fill="url('#logo-gradient')"  fill-opacity="1">
+        <g fill="url('#logo-gradient')" fill-opacity="1">
           <g transform="translate(42.450902, 60.810479)">
             <g>
               <path
@@ -34,7 +36,7 @@
             </g>
           </g>
         </g>
-        <g fill="url('#logo-gradient')"  fill-opacity="1">
+        <g fill="url('#logo-gradient')" fill-opacity="1">
           <g transform="translate(93.384712, 60.810479)">
             <g>
               <path
@@ -42,7 +44,7 @@
             </g>
           </g>
         </g>
-        <g fill="url('#logo-gradient')"  fill-opacity="1">
+        <g fill="url('#logo-gradient')" fill-opacity="1">
           <g transform="translate(137.951789, 60.810479)">
             <g>
               <path
@@ -50,7 +52,7 @@
             </g>
           </g>
         </g>
-        <g fill="url('#logo-gradient')"  fill-opacity="1">
+        <g fill="url('#logo-gradient')" fill-opacity="1">
           <g transform="translate(180.375611, 60.810479)">
             <g>
               <path
@@ -58,7 +60,7 @@
             </g>
           </g>
         </g>
-        <g fill="url('#logo-gradient')"  fill-opacity="1">
+        <g fill="url('#logo-gradient')" fill-opacity="1">
           <g transform="translate(221.979966, 60.810479)">
             <g>
               <path
@@ -66,7 +68,7 @@
             </g>
           </g>
         </g>
-        <g fill="url('#logo-gradient')"  fill-opacity="1">
+        <g fill="url('#logo-gradient')" fill-opacity="1">
           <g transform="translate(279.469605, 60.810479)">
             <g>
               <path
@@ -74,7 +76,7 @@
             </g>
           </g>
         </g>
-        <g fill="url('#logo-gradient')"  fill-opacity="1">
+        <g fill="url('#logo-gradient')" fill-opacity="1">
           <g transform="translate(330.403402, 60.810479)">
             <g>
               <path
@@ -93,24 +95,50 @@
     </a>
   </div>
 
-  <div id="navbarBasicExample" class="navbar-menu">
+  <div id="navbarBasicExample" class="navbar-menu has-background-dark">
     <div class="navbar-start">
-      <a class="navbar-item" routerLink="home" routerLinkActive="is-active">
+      <a class="navbar-item" routerLink="" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">
         <i class="bi bi-house-door-fill mr-2"></i>
-        Home
+        หน้าหลัก
       </a>
+      <a class="navbar-item" routerLink="profile" routerLinkActive="is-active">
+        <i class="bi bi-person-fill mr-2"></i>
+        ข้อมูลส่วนตัว
+      </a>
+      <!-- <a class="navbar-item" routerLink="member">
+        <i class="bi bi-people-fill mr-1"></i>สมาชิก</a> -->
       <a class="navbar-item" routerLink="project" routerLinkActive="is-active">
-        <i class="bi bi-file-code-fill mr-2"></i>
-        Project
-      </a>
+        <i class="bi bi-file-code-fill mr-2"></i>โปรเจค</a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" routerLink="workshop" routerLinkActive="is-active">
+          <i class="bi bi-collection-fill mr-2"></i> รวมชิ้นงาน
+        </a>
+
+        <div class="navbar-dropdown has-background-dark">
+          <a class="navbar-item" routerLink="/workshop/twowaybinding" routerLinkActive="is-active">
+            Two-Way Binding
+          </a>
+          <a class="navbar-item" routerLink="/workshop/member" routerLinkActive="is-active">
+            Form
+          </a>
+        </div>
+      </div>
     </div>
+
     <div class="navbar-end">
+
       <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-light" href="https://github.com/bKoZii/cloud-konkamon" target="_blank" ref="noopener noreferrer">
+        <div class="buttons has-addons is-expanded">
+          <a class="button is-light" href="https://github.com/bKoZii/cloud-konkamon" target="_blank"
+            ref="noopener noreferrer">
             <i class="bi bi-github mr-2"></i>
             <strong>GitHub</strong>
-          </a>   
+          </a>
+          <a class="button is-black" href="https://konkamon-angular.web.app" target="_blank"
+            ref="noopener noreferrer">
+            <i class="bi bi-globe mr-2"></i>
+            <strong>Bootstrap Version</strong>
+          </a>
         </div>
       </div>
     </div>
