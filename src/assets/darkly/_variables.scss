@@ -18,48 +18,9 @@ $white-ter: #ecf0f1;
 $primary: #375a7f !default;
 $yellow-invert: #fff;
 
-@font-face {
-  font-family: "Nunito";
-  font-weight: 400;
-  src: url('/src/assets/Nunito-400.woff2') format('woff2');
-}
-@font-face {
-  font-family: "Nunito";
-  font-weight: 500;
-  src: url('/src/assets/Nunito-500.woff2') format('woff2');
-}
-@font-face {
-  font-family: "Nunito";
-  font-weight: 600;
-  src: url('/src/assets/Nunito-600.woff2') format('woff2');
-}
-@font-face {
-  font-family: "Nunito";
-  font-weight: 800;
-  src: url('/src/assets/Nunito-800.woff2') format('woff2');
-}
-@font-face {
-  font-family: "Noto Sans Thai Looped";
-  font-weight: 400;
-  src: url('/src/assets/NotoSansThaiLooped-400.woff2') format('woff2');
-}
-@font-face {
-  font-family: "Noto Sans Thai Looped";
-  font-weight: 600;
-  src: url('/src/assets/NotoSansThaiLooped-600.woff2') format('woff2');
-}
-@font-face {
-  font-family: "Noto Sans Thai Looped";
-  font-weight: 800;
-  src: url('/src/assets/NotoSansThaiLooped-800.woff2') format('woff2');
-}
 
-$family-sans-serif: "Nunito", 'Noto Sans Thai Looped' !default;
-
-// $family-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI",
-//   "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$family-sans-serif: "Nunito", "Noto Sans Thai Looped", "Arial", "Segoe UI", system-ui, sans-serif;
 // $family-monospace: "Inconsolata", "Consolas", "Monaco", monospace;
-
 $radius-small: 3px;
 $radius: 0.4em;
 $radius-large: 8px;
@@ -105,8 +66,9 @@ $button-active-color: darken($text, 5); // text-dark
 $button-disabled-background-color: $grey-light;
 
 $control-height: 2.5em;
+$input-background-color: $grey-dark;
 
-$input-color: $grey-darker;
+$input-color: $white-ter;
 $input-icon-color: $grey;
 $input-icon-active-color: $input-color;
 $input-hover-color: $grey-light;
@@ -125,7 +87,7 @@ $table-striped-row-even-hover-background-color: lighten($grey-darker, 2);
 $pagination-color: $link;
 $pagination-border-color: $border;
 
-$navbar-height: 4rem;
+$navbar-height: 3.5rem;
 
 $navbar-background-color: $primary;
 $navbar-item-color: $text;
