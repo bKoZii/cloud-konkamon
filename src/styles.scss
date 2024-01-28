@@ -5,3 +5,40 @@ h1.title{
 }
 // @import '/node_modules/bulma/bulma.sass';
 
+@font-face {
+    font-family: "Nunito";
+    font-weight: 400;
+    src: url('assets/Nunito-400.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: "Nunito";
+    font-weight: 500;
+    src: url('assets/Nunito-500.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: "Nunito";
+    font-weight: 600;
+    src: url('assets/Nunito-600.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: "Nunito";
+    font-weight: 800;
+    src: url('assets/Nunito-800.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: "Noto Sans Thai Looped";
+    font-weight: 400;
+    src: url('assets/NotoSansThaiLooped-400.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: "Noto Sans Thai Looped";
+    font-weight: 600;
+    src: url('assets/NotoSansThaiLooped-600.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: "Noto Sans Thai Looped";
+    font-weight: 800;
+    src: url('assets/NotoSansThaiLooped-800.woff2') format('woff2');
+  }
+
+
