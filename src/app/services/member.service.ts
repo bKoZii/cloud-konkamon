@@ -1,12 +1,28 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
+import { IMember } from '../model/member.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class MemberService {
+export class MemberService implements OnInit{
 
-  constructor() { }
-  submitData(data: any){
+  private dbPath = "/members";
+
+  memberRef: AngularFirestoreCollection<IMember>;
+
+  ngOnInit(): void {
+      
+  }
+  constructor(private db: AngularFirestore) {
+    this.memberRef = db.collection(this.dbPath);
+  }
+
+  submitData(data:IMember): any {
     console.log(data);
+    this.memberRef.add({...data})
+  }
+  retrieveData(): AngularFirestoreCollection<IMember> {
+    return this.memberRef;
   }
 }
