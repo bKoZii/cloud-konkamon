@@ -6,12 +6,14 @@ import { HomeComponent } from './home/home.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore'
+
 import { env } from 'src/env/env';
+
 import { MatDialogModule } from '@angular/material/dialog';
-import { MemberComponent } from './workshop/member/member.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProjectComponent } from './project/project.component';
-
+import { WorkshopComponent } from './workshop/workshop.component';
 
 @NgModule({
   declarations: [
@@ -27,9 +29,10 @@ import { ProjectComponent } from './project/project.component';
     AppRoutingModule,
     AngularFireModule.initializeApp(env.firebase), // initialize ตั้งค่าของ firebase ที่กำหนดไว้ใน /src/env/env.ts
     AngularFireDatabaseModule,
-    MatDialogModule
+    AngularFirestoreModule,
+    MatDialogModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
